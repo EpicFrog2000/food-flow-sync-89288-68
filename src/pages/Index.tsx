@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { ChefHat, ClipboardList, Settings } from 'lucide-react';
+import { ChefHat, ClipboardList, Settings, History } from 'lucide-react';
 import dumplingLogo from '@/assets/dumpling-logo-new.png';
 
 const Index = () => {
@@ -27,7 +27,7 @@ const Index = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           <Card className="hover:shadow-xl transition-shadow cursor-pointer" onClick={() => navigate('/waiter')}>
             <CardHeader className="text-center pb-4">
               <div className="w-20 h-20 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
@@ -75,6 +75,23 @@ const Index = () => {
               </p>
               <Button className="w-full" size="lg" variant="outline">
                 Zarządzaj Menu
+              </Button>
+            </CardContent>
+          </Card>
+
+          <Card className="hover:shadow-xl transition-shadow cursor-pointer" onClick={() => navigate('/history')}>
+            <CardHeader className="text-center pb-4">
+              <div className="w-20 h-20 bg-muted rounded-full flex items-center justify-center mx-auto mb-4">
+                <History className="h-10 w-10 text-muted-foreground" />
+              </div>
+              <CardTitle className="text-2xl">Historia Zamówień</CardTitle>
+            </CardHeader>
+            <CardContent className="text-center">
+              <p className="text-muted-foreground mb-6">
+                Przeglądaj zakończone zamówienia
+              </p>
+              <Button className="w-full" size="lg" variant="outline">
+                Zobacz Historię
               </Button>
             </CardContent>
           </Card>
