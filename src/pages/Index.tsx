@@ -9,7 +9,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background to-secondary flex items-center justify-center p-6">
-      <div className=" w-full">
+      <div className=" w-full"> 
         <div className="text-center mb-12">
           <div className="flex flex-col items-center mb-6">
             <img 
