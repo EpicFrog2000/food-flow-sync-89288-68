@@ -19,7 +19,7 @@ const Index = () => {
             />
             <h2 className="text-4xl font-bold text-primary mb-2">DumplingChat</h2>
           </div>
-          <h1 className="text-5xl font-bold mb-4 bg-[var(--gradient-primary)] bg-clip-text text-transparent color-black">
+          <h1 className="text-5xl font-bold mb-4 bg-[var(--gradient-primary)] bg-clip-text text-transparent text-black">
             System Zamówień Restauracyjnych
           </h1>
           <p className="text-xl text-muted-foreground">
