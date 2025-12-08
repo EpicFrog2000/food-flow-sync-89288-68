@@ -8,8 +8,12 @@ import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { OrderCard } from '@/components/OrderCard';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { ArrowLeft, Plus, X } from 'lucide-react';
 import { toast } from 'sonner';
+
+const WAITERS = ['Barbara', 'Joanna', 'Aleksandra', 'Wiktor'];
+const TABLE_NUMBERS = Array.from({ length: 10 }, (_, i) => i + 1);
 
 export default function Waiter() {
   const navigate = useNavigate();
@@ -169,23 +173,34 @@ export default function Waiter() {
             <CardContent className="space-y-4">
               <div>
                 <Label htmlFor="waiter">Imię Kelnera</Label>
-                <Input
-                  id="waiter"
-                  value={waiterName}
-                  onChange={(e) => setWaiterName(e.target.value)}
-                  placeholder="Wprowadź swoje imię"
-                />
+                <Select value={waiterName} onValueChange={setWaiterName}>
+                  <SelectTrigger id="waiter">
+                    <SelectValue placeholder="Wybierz kelnera" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {WAITERS.map((name) => (
+                      <SelectItem key={name} value={name}>
+                        {name}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
               </div>
               
               <div>
                 <Label htmlFor="table">Numer Stolika</Label>
-                <Input
-                  id="table"
-                  type="number"
-                  value={tableNumber}
-                  onChange={(e) => setTableNumber(e.target.value)}
-                  placeholder="Wprowadź numer stolika"
-                />
+                <Select value={tableNumber} onValueChange={setTableNumber}>
+                  <SelectTrigger id="table">
+                    <SelectValue placeholder="Wybierz stolik" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {TABLE_NUMBERS.map((num) => (
+                      <SelectItem key={num} value={num.toString()}>
+                        Stolik {num}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
               </div>
 
               <div>
