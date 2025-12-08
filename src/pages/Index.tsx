@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ChefHat, ClipboardList, Settings } from 'lucide-react';
-import dumplingLogo from '@/assets/dumpling-logo.png';
+import dumplingLogo from '@/assets/dumpling-logo-new.png';
 
 const Index = () => {
   const navigate = useNavigate();
