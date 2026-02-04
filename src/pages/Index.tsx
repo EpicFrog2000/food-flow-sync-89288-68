@@ -3,23 +3,16 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ChefHat, ClipboardList, Settings, History } from 'lucide-react';
 import dumplingLogo from '@/assets/dumpling-logo-new.png';
-
 const Index = () => {
   const navigate = useNavigate();
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-background to-secondary flex items-center justify-center p-6">
+  return <div className="min-h-screen bg-gradient-to-br from-background to-secondary flex items-center justify-center p-6">
       <div className=" w-full"> 
         <div className="text-center mb-12">
           <div className="flex flex-col items-center mb-6">
-            <img 
-              src={dumplingLogo} 
-              alt="DumplingChat Logo" 
-              className="w-48 h-48 mb-4 animate-fade-in"
-            />
+            <img src={dumplingLogo} alt="DumplingChat Logo" className="w-48 h-48 mb-4 animate-fade-in" />
             <h2 className="text-4xl font-bold text-primary mb-2">DumplingChat</h2>
           </div>
-          <h1 className="text-5xl font-bold mb-4 bg-[var(--gradient-primary)] bg-clip-text text-transparent text-black">
+          <h1 className="text-5xl font-bold mb-4 bg-[var(--gradient-primary)] bg-clip-text text-primary">
             System Zamówień Restauracyjnych
           </h1>
           <p className="text-xl text-muted-foreground">
@@ -97,8 +90,6 @@ const Index = () => {
           </Card>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
