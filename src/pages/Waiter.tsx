@@ -33,7 +33,6 @@ export default function Waiter() {
     if (savedMenu) {
       try {
         const parsed = JSON.parse(savedMenu);
-        // Migrate old string array to new MenuItem format
         if (parsed.length > 0 && typeof parsed[0] === 'string') {
           const migrated = parsed.map((name: string) => ({ name, price: 0 }));
           setMenuItems(migrated);
